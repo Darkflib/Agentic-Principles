@@ -1,5 +1,9 @@
 # Principles of Good Agents
 
+>[!NOTE]
+> This is still a work-in-progress. It is shared publicly to promote discussion. If you have any suggestions or critique, please raise an issue.
+> It is designed to compliment the [12 factor agents](https://github.com/humanlayer/12-factor-agents) framework, not compete with it.
+
 A manifesto for building reliable, respectful, and rational agentic systems
 
 ## Preamble
