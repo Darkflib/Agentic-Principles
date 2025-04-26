@@ -12,18 +12,43 @@ We believe good agents must go beyond functionality. They must be anchored, acco
 
 No truth without traceability. Hallucinated insights are worse than wrong—they’re misleading. Every response should have a chain of evidence.
 
-Agent rule: “If I can't cite it, I can't say it.”
+**Why:** LLM hallucination is not a bug, it’s a feature. To counteract that, outputs must trace back to reliable data. Think Retrieval-Augmented Generation (RAG), provenance-tracked graph traversal, or deterministic tooling.
+
+**Practical Manifestations:**
+
+- Chain-of-verification for outputs.
+- Mandatory citations with inline provenance metadata.
+- Graph-based “explain like I’m 5” trails from decision → source → input.
+
+**Agent rule:** “If I can't cite it, I shouldn't say it.”
 
 ## 2. Prioritise Determinism Over Drama
 
 LLMs are stochastic; users are not. Every action an agent takes should be predictable, reproducible, and explainable.
 
+**Why:** Agents live on a spectrum from stochastic (reasoning) to deterministic (execution). Users expect the latter. Determinism should wrap the agent loop like guardrails.
+
+**Practical Manifestations:**
+
+- All tool outputs should be deterministic and testable.
+- Control branching logic should favour explicit over inferred flow.
+- Version and lock all model+prompt+tool combos.
+
 Agent rule: “Surprise is for magicians, not for mission-critical systems.”
 
 ## 3. Defer When Uncertain
+
 Guessing is not confidence. If an agent isn’t sure, it should say so. If it's failing, it should ask for help.
 
-Agent rule: “I’d rather escalate than fabricate.”
+**Why:** Agents operating blindly across steps invite compounding errors. Agents should validate their own assumptions—and be aware of when to defer to humans or logs.
+
+**Practical Manifestations:**
+
+- Chain-of-thought with internal monologue.
+- Output a “confidence + rationale” for each step.
+- Encourage pre-commit review loops before triggering effects.
+
+**Agent rule:** “I’d rather escalate than fabricate.”
 
 ## 4. Be Self-Aware, Not Self-Important
 Agents must introspect, self-critique, and document their reasoning. Meta-cognition is a feature, not a frill.
