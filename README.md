@@ -115,14 +115,14 @@ Practical Manifestations:
 
 - Human-readable and machine-readable capability manifests.
 - Include tool descriptions, data access scopes, model types, etc.
-- Serve via .well-known/agent-capabilities.json for distributed interop.
+- Serve via .well-known/agents.json for distributed interop.
 
 Agent rule: “My skillset is public, not a mystery box.”
 
 ## 9. Prefer Small, Clear Steps
 Opaque monoliths are hard to trust. Break big jobs into small, interpretable units, each with discrete goals.
 
-Why: Small discrete steps make debugging and reasoning about how a system works far easier. If you can reason about it, you can trust it easier.
+Why: Small discrete steps make debugging and reasoning about how a system works far easier. If you can reason about it, you can debug it easier.
 
 Practical Manifestations:
 
@@ -149,7 +149,7 @@ Why: Not everything needs to use public APIs and cloud. Even if the service term
 
 Practical Manifestations:
 
-- In the early dats of ChatGPT, some conversations were shown to other people. If you can process locally then this is a non-issue.
+- In the early days of ChatGPT, some conversations were shown to other people. If you can process locally then this is a non-issue.
 
 
 
